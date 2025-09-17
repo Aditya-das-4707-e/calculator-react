@@ -1,0 +1,64 @@
+.buttonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* .button{
+    height: 45px;
+    width: 45px;
+    margin: 3px;
+} */
+
+.button {
+  display: inline-block;
+  margin: 1px;
+  height: 42px;
+  width: 45px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #272626;
+  background-image: linear-gradient(to bottom right, #c0d9e0, #bfc1c2);
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0px 4px 0px #bfc1c2;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 6px 0px #bfc1c2;
+}
+
+.button:active {
+  transform: translateY(0px);
+  box-shadow: none;
+  background-image: linear-gradient(to bottom right, #bfc1c2, #c0d9e0);
+}
+
+.button:before,
+.button:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.button:before {
+  top: -3px;
+  left: -3px;
+  border-radius: 40px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+
+.button:after {
+  bottom: -3px;
+  right: -3px;
+  border-radius: 40px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
