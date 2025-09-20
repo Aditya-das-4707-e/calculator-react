@@ -8,7 +8,15 @@ function App() {
 
   const [calval, setcalval] = useState("");
   const onButtonClick = (buttonText) => {
-    console.log(buttonText)
+    if (buttonText === "C") {
+      setcalval("");
+    } else if (buttonText === "=") {
+      const result = eval(calval);
+      setcalval(result)
+    } else {
+      const newDisplayValue = calval + buttonText;
+      setcalval(newDisplayValue);
+    }
   }
 
   return (
