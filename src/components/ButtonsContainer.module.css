@@ -1,64 +1,138 @@
 .buttonsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 15px;
+  background: linear-gradient(145deg, #0f172a, #1e293b);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-/* .button{
-    height: 45px;
-    width: 45px;
-    margin: 3px;
-} */
-
 .button {
-  display: inline-block;
-  margin: 1px;
-  height: 42px;
-  width: 45px;
-  font-size: 24px;
+  height: 55px;
+  width: 100%;
+  font-size: 22px;
   font-weight: bold;
-  text-transform: uppercase;
-  color: #272626;
-  background-image: linear-gradient(to bottom right, #c0d9e0, #bfc1c2);
+  color: #e2e8f0;
+  background: linear-gradient(145deg, #1e293b, #0f172a);
   border: none;
-  border-radius: 40px;
-  box-shadow: 0px 4px 0px #bfc1c2;
-  transition: all 0.2s ease-in-out;
+  border-radius: 12px;
+  box-shadow: 
+    0 4px 0px #0f172a,
+    0 6px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.1s ease;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), transparent);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
 }
 
 .button:hover {
-  transform: translateY(-4px);
-  box-shadow: 0px 6px 0px #bfc1c2;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 0px #0f172a,
+    0 8px 12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .button:active {
-  transform: translateY(0px);
-  box-shadow: none;
-  background-image: linear-gradient(to bottom right, #bfc1c2, #c0d9e0);
+  transform: translateY(4px);
+  box-shadow: 
+    0 0px 0px #0f172a,
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  background: linear-gradient(145deg, #0f172a, #1e293b);
 }
 
-.button:before,
-.button:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
+/* RGB glow effects for specific buttons */
+.button:nth-child(4n+1):hover { /* Every 4th button starting from 1 */
+  box-shadow: 
+    0 6px 0px #0f172a,
+    0 8px 12px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(66, 153, 225, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-.button:before {
-  top: -3px;
-  left: -3px;
-  border-radius: 40px;
-  border-top: 3px solid #fff;
-  border-left: 3px solid #fff;
+.button:nth-child(4n+2):hover {
+  box-shadow: 
+    0 6px 0px #0f172a,
+    0 8px 12px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(239, 68, 68, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-.button:after {
-  bottom: -3px;
-  right: -3px;
-  border-radius: 40px;
-  border-bottom: 3px solid #fff;
-  border-right: 3px solid #fff;
+.button:nth-child(4n+3):hover {
+  box-shadow: 
+    0 6px 0px #0f172a,
+    0 8px 12px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(34, 197, 94, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.button:nth-child(4n):hover {
+  box-shadow: 
+    0 6px 0px #0f172a,
+    0 8px 12px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(245, 158, 11, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Special styling for equals button */
+.button:last-child {
+  background: linear-gradient(145deg, #3b82f6, #2563eb);
+  grid-column: span 2;
+}
+
+.button:last-child:hover {
+  box-shadow: 
+    0 6px 0px #1e40af,
+    0 8px 12px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(59, 130, 246, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Special styling for clear button */
+.button:first-child {
+  background: linear-gradient(145deg, #ef4444, #dc2626);
+}
+
+.button:first-child:hover {
+  box-shadow: 
+    0 6px 0px #991b1b,
+    0 8px 12px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(239, 68, 68, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Operator buttons */
+.button:nth-child(4),
+.button:nth-child(7),
+.button:nth-child(10),
+.button:nth-child(13) {
+  background: linear-gradient(145deg, #475569, #334155);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .buttonsContainer {
+    gap: 10px;
+    padding: 12px;
+  }
+  
+  .button {
+    height: 50px;
+    font-size: 20px;
+  }
 }
