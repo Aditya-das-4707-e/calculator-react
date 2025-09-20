@@ -10,7 +10,7 @@ This is a simple calculator application built using React and Vite. It provides 
 
 ## Live Demo
 
-Check out the live version of the app here: [Calculator React App](https://calculator-react-lnv8cdxlp-aditya-das-projects-a3948e45.vercel.app/)
+Check out the live version of the app here: [Calculator React App](https://calculator-react-indol-nine.vercel.app/)
 
 ## Project Setup
 
