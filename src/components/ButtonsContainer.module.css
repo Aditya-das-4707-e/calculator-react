@@ -116,12 +116,24 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-/* Operator buttons */
-.button:nth-child(4),
-.button:nth-child(7),
-.button:nth-child(10),
-.button:nth-child(13) {
+/* Operator buttons - all with the same color */
+.button:nth-child(4),  /* + */
+.button:nth-child(8),  /* - */
+.button:nth-child(12), /* * */
+.button:nth-child(16) { /* / */
   background: linear-gradient(145deg, #475569, #334155);
+}
+
+/* Operator button hover effects */
+.button:nth-child(4):hover,  /* + */
+.button:nth-child(8):hover,  /* - */
+.button:nth-child(12):hover, /* * */
+.button:nth-child(16):hover { /* / */
+  box-shadow: 
+    0 6px 0px #1e293b,
+    0 8px 12px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(148, 163, 184, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive adjustments */
