@@ -7,12 +7,15 @@ import ButtonsContainer from './components/ButtonsContainer'
 function App() {
 
   const [calval, setcalval] = useState("");
+  const onButtonClick = (buttonText) => {
+    console.log(buttonText)
+  }
 
   return (
     <>
       <div className={styles.calculator}>
         <Display displayValue={calval}></Display>
-        <ButtonsContainer></ButtonsContainer>
+        <ButtonsContainer onButtonClick={onButtonClick}></ButtonsContainer>
       </div>
     </>
   )
