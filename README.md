@@ -1,12 +1,68 @@
-# React + Vite
+# Calculator React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple calculator application built using React and Vite. It provides basic arithmetic operations and a responsive user interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Perform basic arithmetic operations: addition, subtraction, multiplication, and division.
+- Responsive design for various screen sizes.
+- Built with modern React and Vite for fast development and performance.
 
-## Expanding the ESLint configuration
+## Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Check out the live version of the app here: [Calculator React App](https://calculator-react-lnv8cdxlp-aditya-das-projects-a3948e45.vercel.app/)
+
+## Project Setup
+
+This project was bootstrapped with Vite and uses React for the frontend. Below are the steps to set up the project locally:
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Aditya-das-4707-e/calculator-react.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd calculator-react
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the App
+
+To start the development server:
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173` by default.
+
+### Building for Production
+
+To create a production build:
+```bash
+npm run build
+```
+
+The build output will be located in the `dist` directory.
+
+### Previewing the Production Build
+
+To preview the production build locally:
+```bash
+npm run preview
+```
+
+## License
+
+This project is licensed under the MIT License.
